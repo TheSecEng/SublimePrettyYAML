@@ -19,7 +19,7 @@ class PrettyyamlCommand(sublime_plugin.TextCommand):
             if region.empty() and len(regions) > 1:
                 continue
             elif region.empty() and s.get("use_entire_file_if_no_selection", True):
-                selection = sublime.Region(0, view.size())
+                selection = sublime.Region(0, self.view.size())
                 selected_entire_file = True
             else:
                 selection = region
